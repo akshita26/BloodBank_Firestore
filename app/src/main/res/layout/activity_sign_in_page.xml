@@ -12,34 +12,56 @@
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
         android:fontFamily="cursive"
-        android:textStyle="bold"
+        android:gravity="center"
+        android:text="WELCOME  BACK"
         android:textColor="#000"
-        android:text="WELCOME  BACK" />
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/editTextPhone"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:background="@drawable/roundcorner"
-        android:ems="10"
-        android:hint="Mobile"
-        android:padding="5dp"
-        android:inputType="phone" />
+        android:layout_height="wrap_content"
+        app:prefixText="+91"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:startIconDrawable="@drawable/call">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mobile"
+            android:inputType="phone"
+            android:ems="10"
+            android:maxLength="10"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#A9D80A0A"
+        android:textAllCaps="false"
+        android:onClick="sendotp"
+        android:text="Get OTP" />
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/roundcorner"
-        android:ems="10"
-        android:layout_marginTop="10dp"
-        android:padding="5dp"
-        android:inputType="textPersonName"
-        android:hint="Enter OTP" />
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:startIconDrawable="@android:drawable/ic_lock_lock"
+        app:endIconMode="password_toggle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter OTP"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/button4"
