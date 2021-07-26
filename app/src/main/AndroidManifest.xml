@@ -14,12 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BloodBank">
         <activity android:name=".dataList">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+        <activity android:name=".Showdata"></activity>
         <activity android:name=".DonorData">
         </activity>
         <activity android:name=".AdminPage" >
@@ -27,10 +23,19 @@
         <activity android:name=".SignUpPage">
 
         </activity>
-        <activity android:name=".SignInPage"></activity>
-        <activity android:name=".MainActivity">
-
+        <activity android:name=".SignInPage">
         </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

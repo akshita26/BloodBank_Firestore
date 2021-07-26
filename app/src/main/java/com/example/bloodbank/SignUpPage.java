@@ -134,6 +134,8 @@ public class SignUpPage extends AppCompatActivity {
                                     @Override
                                     public void onSuccess(DocumentReference documentReference) {
                                         Toast.makeText(SignUpPage.this, "Data saved", Toast.LENGTH_SHORT).show();
+                                        Intent i = new Intent(SignUpPage.this,dataList.class);
+                                        startActivity(i);
                                     }
                                 })
                                 .addOnFailureListener(new OnFailureListener() {

@@ -121,59 +121,6 @@ public class DonorData extends AppCompatActivity {
 
     }
 
-//    public void chooseimg(View view) {
-//       selectImage();
-//    }
-//
-//    private void selectImage() {
-//        final CharSequence[] options = {"Take Photo", "Choose from Gallery", "Cancel"};
-//        AlertDialog.Builder builder = new AlertDialog.Builder(DonorData.this);
-//        builder.setTitle("Add Photo!");
-//        builder.setItems(options, new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int item) {
-//                if (options[item].equals("Take Photo")) {
-//                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//                    startActivityForResult(intent, 0);
-//                } else if (options[item].equals("Choose from Gallery")) {
-//                    Intent pickPhoto = new Intent(Intent.ACTION_PICK,
-//                            android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-//                    startActivityForResult(pickPhoto, 1);
-//                } else if (options[item].equals("Cancel")) {
-//                    dialog.dismiss();
-//                }
-//            }
-//        });
-//        builder.show();
-//    }
-
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        if (resultCode != RESULT_CANCELED) {
-//            switch (requestCode) {
-//                case 0:
-//                    if (resultCode == RESULT_OK && data != null) {
-//                        Bitmap selectedImage = (Bitmap) data.getExtras().get("data");
-//                        imageView.setImageBitmap(selectedImage);
-//                    }
-//
-//                    break;
-//                case 1:
-//                    selectedImage = data.getData();
-//                    try {
-//
-//                        Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), selectedImage);
-//                        imageView.setImageBitmap(bitmap);
-//                    }
-//                    catch (IOException e) {
-//                        e.printStackTrace();
-//                    }
-//                    break;
-//            }
-//        }
-//    }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
@@ -266,5 +213,10 @@ public class DonorData extends AppCompatActivity {
     public void anotheruser(View view) {
         Intent intent=new Intent(this,DonorData.class);
         startActivity(intent);
+    }
+
+    public void sigout(View view) {
+        Intent i= new Intent(DonorData.this,MainActivity.class);
+        startActivity(i);
     }
 }

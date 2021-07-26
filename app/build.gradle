@@ -52,6 +52,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:20.0.1'
     implementation 'com.firebaseui:firebase-ui-storage:3.2.1'
     implementation 'com.firebaseui:firebase-ui-database:6.2.1'
+    implementation 'androidx.browser:browser:1.2.0'
 
 
 }
