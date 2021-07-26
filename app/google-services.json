@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "147328974984",
+    "project_id": "otp-auth-a4733",
+    "storage_bucket": "otp-auth-a4733.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147328974984:android:9c38e1bd403a4e4a5f5f3d",
+        "android_client_info": {
+          "package_name": "com.example.acer.firebasewphone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147328974984-sa9o5kgk9q9tpfoung88v9al879u17i2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlJsx1DXQ5mM0NLgYd2eAh6INaBgWw1VI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147328974984-sa9o5kgk9q9tpfoung88v9al879u17i2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147328974984:android:1440cf407acd9c195f5f3d",
+        "android_client_info": {
+          "package_name": "com.example.bloodbank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147328974984-0ja96vo2fi82tpua9ajoq0o43lvoqbd1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bloodbank",
+            "certificate_hash": "9a56a26644f832028fa4e44e5f8122e136d8499f"
+          }
+        },
+        {
+          "client_id": "147328974984-sa9o5kgk9q9tpfoung88v9al879u17i2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlJsx1DXQ5mM0NLgYd2eAh6INaBgWw1VI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147328974984-sa9o5kgk9q9tpfoung88v9al879u17i2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
