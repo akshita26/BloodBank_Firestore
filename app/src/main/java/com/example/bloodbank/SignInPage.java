@@ -58,11 +58,11 @@ public class SignInPage extends AppCompatActivity {
     public void signinclick(View view) {
         s1=e1.getText().toString();
         s2=e2.getText().toString();
-//        if(s2.isEmpty()){
-//            Toast.makeText(this,"Enter verification code",Toast.LENGTH_SHORT).show();
-//            e1.requestFocus();
-//            return;
-//        }
+        if(s2.isEmpty()){
+            Toast.makeText(this,"Enter verification code",Toast.LENGTH_SHORT).show();
+            e1.requestFocus();
+            return;
+        }
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(codeSent, s2);
         db=FirebaseFirestore.getInstance();
         CollectionReference cref=db.collection("client");
@@ -71,8 +71,9 @@ public class SignInPage extends AppCompatActivity {
         q1.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                Intent intent = new Intent(SignInPage.this,dataList.class);
-                startActivity(intent);
+                signInWithPhoneAuthCredential(credential);
+//                Intent intent = new Intent(SignInPage.this,dataList.class);
+//                startActivity(intent);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
