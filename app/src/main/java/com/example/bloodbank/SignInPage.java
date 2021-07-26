@@ -91,11 +91,10 @@ public class SignInPage extends AppCompatActivity {
                     public void onComplete(Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             //here we can open a new activity
+                            Toast.makeText(getApplicationContext(),"Login successful", Toast.LENGTH_SHORT).show();
                             Intent i = new Intent(SignInPage.this, dataList.class);
                             startActivity(i);
-                            finish();
 
-                            Toast.makeText(getApplicationContext(),"Login successful", Toast.LENGTH_SHORT).show();
                         } else {
                             if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
                                 // The verification code entered was invalid

@@ -126,8 +126,6 @@ public class SignUpPage extends AppCompatActivity {
                         reg_entry.put("Blood Group", bg);
                         reg_entry.put("Last donated", dod);
 
-
-                        //   String myId = ref.getId();
                         db.collection("client")
                                 .add(reg_entry)
                                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
@@ -148,12 +146,6 @@ public class SignUpPage extends AppCompatActivity {
                 }
             });
 
-
-
-//            Toast.makeText(this, "Your details are safe with us!", Toast.LENGTH_LONG).show();
-
-//        Intent i = new Intent(this, ListDetails.class);
-//        startActivity(i);
     }
 
         else{
